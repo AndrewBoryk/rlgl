@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "459AE0D21A23A10900FBEDEC"
-               BuildableName = "RedLightGreenLight.app"
+               BuildableName = "redlightgreenlight.app"
                BlueprintName = "RedLightGreenLight"
                ReferencedContainer = "container:RedLightGreenLight.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "459AE0D21A23A10900FBEDEC"
-            BuildableName = "RedLightGreenLight.app"
+            BuildableName = "redlightgreenlight.app"
             BlueprintName = "RedLightGreenLight"
             ReferencedContainer = "container:RedLightGreenLight.xcodeproj">
          </BuildableReference>
@@ -72,11 +72,12 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "459AE0D21A23A10900FBEDEC"
-            BuildableName = "RedLightGreenLight.app"
+            BuildableName = "redlightgreenlight.app"
             BlueprintName = "RedLightGreenLight"
             ReferencedContainer = "container:RedLightGreenLight.xcodeproj">
          </BuildableReference>
@@ -90,11 +91,12 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "459AE0D21A23A10900FBEDEC"
-            BuildableName = "RedLightGreenLight.app"
+            BuildableName = "redlightgreenlight.app"
             BlueprintName = "RedLightGreenLight"
             ReferencedContainer = "container:RedLightGreenLight.xcodeproj">
          </BuildableReference>

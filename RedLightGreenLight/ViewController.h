@@ -4,7 +4,7 @@
 //
 //  Created by Andrew Boryk on 11/24/14.
 //  Copyright (c) 2014 Andrew Boryk. All rights reserved.
-//
+//  On Github
 
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
@@ -37,6 +37,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *timeHigh;
 @property (strong, nonatomic) IBOutlet UIView *frontPop;
 @property (strong, nonatomic) IBOutlet UIView *backPop;
+@property (strong, nonatomic) IBOutlet UIButton *menuButton;
 
 - (IBAction)personAction:(id)sender;
 - (IBAction)stepGesture:(id)sender;

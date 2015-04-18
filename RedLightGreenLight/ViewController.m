@@ -89,14 +89,14 @@ float fontSize;
     self.freeze = false;
     self.intervalTracker = 0.0f;
     self.stepsTaken = 0;
-    
+    self.menuButton.enabled = NO;
+    [self start];
 }
 
 -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     self.counts = 0;
-    [self start];
     [self count];
 }
 -(void)makeRandom
@@ -161,7 +161,7 @@ float fontSize;
 {
     self.freeze = false;
     [self makeRandom];
-    self.person.backgroundColor = [UIColor colorWithRed:27.0f/255.0f green:188.0f/255.0f blue:155.0f/255.0f alpha:1.0f];
+    self.person.backgroundColor = [UIColor colorWithRed:46.0f/255.0f green:204.0f/255.0f blue:153.0f/255.0f alpha:1.0f];
     [waiter invalidate];
 //    [self.person.imageView setImage:[UIImage imageNamed:@"closed"]];
 //    self.person.imageView.image = [self.person.imageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
@@ -177,7 +177,7 @@ float fontSize;
 }
 -(void)countAdd
 {
-    if ((self.counts - self.stepsTaken) >= 10) {
+    if ((self.counts - self.stepsTaken) >= 5) {
         [counter invalidate];
         if (self.stepsTaken > [self.defaults integerForKey:@"stepScore"] || (self.stepsTaken == [self.defaults integerForKey:@"stepScore"] && self.counts < [self.defaults integerForKey:@"timeScore"]))
         {
@@ -221,7 +221,7 @@ float fontSize;
         }];
         self.freeze = false;
         [self makeRandom];
-        self.person.backgroundColor = [UIColor colorWithRed:27.0f/255.0f green:188.0f/255.0f blue:155.0f/255.0f alpha:1.0f];
+        self.person.backgroundColor = [UIColor colorWithRed:46.0f/255.0f green:204.0f/255.0f blue:153.0f/255.0f alpha:1.0f];
         [timer invalidate];
         [waiter invalidate];
         self.close.enabled = NO;
@@ -273,8 +273,7 @@ float fontSize;
         self.fiveTouch.enabled = NO;
         
         self.stepHigh.text = [NSString stringWithFormat:@"%i", self.stepsTaken];
-        self.timeHigh.text = [NSString stringWithFormat:@"%i", (int)[self.defaults integerForKey:@"stepScore"]];
-        
+        self.timeHigh.text = [NSString stringWithFormat:@"%i", (int)[self.defaults integerForKey:@"stepScore"]];        
 //        self.stepsTakenLabel.text = [NSString stringWithFormat:@"Steps: %i", self.stepsTaken];
 //        self.timeTakenLabel.text = [NSString stringWithFormat:@"Time: %i", self.counts];
         [UIView animateWithDuration:0.66f animations:^{
@@ -293,7 +292,7 @@ float fontSize;
          }];
         self.freeze = false;
         [self makeRandom];
-        self.person.backgroundColor = [UIColor colorWithRed:27.0f/255.0f green:188.0f/255.0f blue:155.0f/255.0f alpha:1.0f];
+        self.person.backgroundColor = [UIColor colorWithRed:46.0f/255.0f green:204.0f/255.0f blue:153.0f/255.0f alpha:1.0f];
         [waiter invalidate];
         [timer invalidate];
         self.close.enabled = NO;
@@ -362,6 +361,7 @@ float fontSize;
 
 - (IBAction)closeLose:(id)sender {
     self.person.hidden = NO;
+    self.menuButton.enabled = NO;
     //[self.person.imageView setImage:[UIImage imageNamed:@"closed"]];
     //self.person.imageView.image = [self.person.imageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     [self.person setTintColor:[UIColor whiteColor]];
@@ -404,6 +404,19 @@ float fontSize;
 
 -(void)enableWait{
     self.close.enabled = YES;
+    [UIView animateWithDuration:.1 animations:^{
+        self.oneLabel.alpha = 0;
+    }
+     completion:^(BOOL finished) {
+         self.oneLabel.text = @"Main Menu";
+         [UIView animateWithDuration:.15f animations:^{
+             self.oneLabel.alpha = 1.0f;
+             
+         }
+          completion:^(BOOL finished) {
+              self.menuButton.enabled = YES;
+          }];
+     }];
 }
 
 @end

@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		459AE0D31A23A10900FBEDEC /* RedLightGreenLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedLightGreenLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		459AE0D31A23A10900FBEDEC /* redlightgreenlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = redlightgreenlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		459AE0D71A23A10900FBEDEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		459AE0D81A23A10900FBEDEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		459AE0DA1A23A10900FBEDEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 		459AE0D41A23A10900FBEDEC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				459AE0D31A23A10900FBEDEC /* RedLightGreenLight.app */,
+				459AE0D31A23A10900FBEDEC /* redlightgreenlight.app */,
 				459AE0EC1A23A10A00FBEDEC /* RedLightGreenLightTests.xctest */,
 			);
 			name = Products;
@@ -200,7 +200,7 @@
 			);
 			name = RedLightGreenLight;
 			productName = RedLightGreenLight;
-			productReference = 459AE0D31A23A10900FBEDEC /* RedLightGreenLight.app */;
+			productReference = 459AE0D31A23A10900FBEDEC /* redlightgreenlight.app */;
 			productType = "com.apple.product-type.application";
 		};
 		459AE0EB1A23A10A00FBEDEC /* RedLightGreenLightTests */ = {
@@ -345,7 +345,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Boryk (6C8JZAH3ZE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrew Boryk (6C8JZAH3ZE)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -386,7 +387,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Boryk (6C8JZAH3ZE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andrew Boryk (6C8JZAH3ZE)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -408,14 +410,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Boryk (6C8JZAH3ZE)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RedLightGreenLight/GoogleMobileAdsSdkiOS-7.0.0",
 				);
 				INFOPLIST_FILE = RedLightGreenLight/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = redlightgreenlight;
 			};
 			name = Debug;
 		};
@@ -423,14 +427,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Andrew Boryk (6C8JZAH3ZE)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RedLightGreenLight/GoogleMobileAdsSdkiOS-7.0.0",
 				);
 				INFOPLIST_FILE = RedLightGreenLight/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = redlightgreenlight;
 			};
 			name = Release;
 		};
