@@ -38,6 +38,7 @@
 @property (strong, nonatomic) IBOutlet UIView *frontPop;
 @property (strong, nonatomic) IBOutlet UIView *backPop;
 @property (strong, nonatomic) IBOutlet UIButton *menuButton;
+@property (strong, nonatomic) IBOutlet UIButton *shareButton;
 
 - (IBAction)personAction:(id)sender;
 - (IBAction)stepGesture:(id)sender;
@@ -46,6 +47,7 @@
 - (IBAction)doubleTapStep:(id)sender;
 - (IBAction)doubleTapDoubleTouchStep:(id)sender;
 - (IBAction)closeLose:(id)sender;
+- (IBAction)shareAction:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIView *loseView;
 @property (strong, nonatomic) IBOutlet GADBannerView *bannerView;
@@ -56,6 +58,11 @@
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *threeTouch;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *fourTouch;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *fiveTouch;
+
+//HowToView
+@property (strong, nonatomic) IBOutlet UIView *howToView;
+- (IBAction)startActionNow:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *startNowButton;
 
 @end
 

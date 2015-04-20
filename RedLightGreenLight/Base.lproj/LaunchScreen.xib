@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -29,11 +29,27 @@
                         <constraint firstAttribute="height" constant="64" id="v09-j7-MLb"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZl-44-crm">
+                    <rect key="frame" x="0.0" y="416" width="480" height="64"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.14117647059999999" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="gk4-HF-6fp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="30"/>
+                    <size key="titleShadowOffset" width="-1" height="1"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.14117647059999999" green="0.1450980392" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="fZl-44-crm" secondAttribute="bottom" id="9af-gm-sm3"/>
                 <constraint firstItem="QbF-Kb-ayt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RaB-Bp-kJu"/>
+                <constraint firstItem="fZl-44-crm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nia-5b-m8x"/>
                 <constraint firstItem="QbF-Kb-ayt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="roa-sA-GkJ"/>
+                <constraint firstAttribute="trailing" secondItem="fZl-44-crm" secondAttribute="trailing" id="x0N-jP-RfH"/>
                 <constraint firstAttribute="trailing" secondItem="QbF-Kb-ayt" secondAttribute="trailing" id="yIP-yy-J0z"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

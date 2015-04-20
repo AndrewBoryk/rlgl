@@ -71,15 +71,18 @@ float fontSize;
     self.timeHigh.layer.borderColor = [UIColor blackColor].CGColor;
     self.close.layer.borderWidth = 0.25f;
     self.close.layer.borderColor = [UIColor blackColor].CGColor;
-    self.oneLabel.text = [NSString stringWithFormat:@"0"];
+    self.shareButton.layer.borderWidth = 0.25f;
+    self.shareButton.layer.borderColor = [UIColor blackColor].CGColor;
+    self.howToView.layer.borderWidth = 0.25f;
+    self.howToView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.howToView.layer.cornerRadius = 10.0f;
+    [self.howToView clipsToBounds];
+    self.oneLabel.text = [NSString stringWithFormat:@"Rules"];
     self.twoLabel.text = [NSString stringWithFormat:@"0"];
     fontSize = self.personSize - 25.0f;
     [self.twoLabel setFont:[UIFont fontWithName:self.twoLabel.font.fontName size:fontSize]];
-    [UIView animateWithDuration:.25f animations:^{
-        self.oneLabel.alpha = 0;
-        self.twoLabel.alpha = 0;
-    }];
-    
+    self.twoLabel.alpha = 0;
+
     self.oneTouch.enabled = YES;
     self.twoTouch.enabled = YES;
     self.threeTouch.enabled = YES;
@@ -90,14 +93,13 @@ float fontSize;
     self.intervalTracker = 0.0f;
     self.stepsTaken = 0;
     self.menuButton.enabled = NO;
-    [self start];
+    [self.howToView setAlpha:1.0f];
 }
 
 -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    self.counts = 0;
-    [self count];
+    
 }
 -(void)makeRandom
 {
@@ -225,6 +227,7 @@ float fontSize;
         [timer invalidate];
         [waiter invalidate];
         self.close.enabled = NO;
+        self.shareButton.enabled = NO;
         enTimer = [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(enableWait) userInfo:nil repeats:NO];
         [UIView animateWithDuration:1.0f animations:^{
             [self.loseView setAlpha:1.0f];
@@ -296,6 +299,7 @@ float fontSize;
         [waiter invalidate];
         [timer invalidate];
         self.close.enabled = NO;
+        self.shareButton.enabled = NO;
         enTimer = [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(enableWait) userInfo:nil repeats:NO];
         [UIView animateWithDuration:0.66f animations:^{
             [self.loseView setAlpha:1.0f];
@@ -402,8 +406,30 @@ float fontSize;
     self.person.layer.cornerRadius = self.personSize/2.0f;
 }
 
+- (IBAction)shareAction:(id)sender {
+    NSLog(@"shareButton pressed");
+    self.bannerView.hidden = YES;
+    self.shareButton.highlighted = NO;
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]){
+        UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, NO, [UIScreen mainScreen].scale);}
+    else{
+        UIGraphicsBeginImageContext(self.view.bounds.size);}
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    NSData *data = UIImagePNGRepresentation(image);
+    UIImage *swag = [UIImage imageWithData:data];
+    NSString *texttoshare = @"Currently Pressing my Luck, catch me if you can! #PressYourLuck";
+    NSArray *activityItems = @[texttoshare, swag];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypeMail, UIActivityTypeCopyToPasteboard];
+    self.bannerView.hidden = NO;
+    [self presentViewController:activityVC animated:TRUE completion:nil];
+}
+
 -(void)enableWait{
     self.close.enabled = YES;
+    self.shareButton.enabled = YES;
     [UIView animateWithDuration:.1 animations:^{
         self.oneLabel.alpha = 0;
     }
@@ -419,4 +445,13 @@ float fontSize;
      }];
 }
 
+- (IBAction)startActionNow:(id)sender {
+    self.oneLabel.text = @"0";
+    [UIView animateWithDuration:.25f animations:^{
+        [self.howToView setAlpha:0];
+    }];
+    [self start];
+    self.counts = 0;
+    [self count];
+}
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		455C2A441AE4A0580096E77E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455C2A431AE4A0570096E77E /* HomeViewController.m */; };
 		459AE0D91A23A10900FBEDEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 459AE0D81A23A10900FBEDEC /* main.m */; };
 		459AE0DC1A23A10900FBEDEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 459AE0DB1A23A10900FBEDEC /* AppDelegate.m */; };
 		459AE0DF1A23A10900FBEDEC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 459AE0DE1A23A10900FBEDEC /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		455C2A421AE4A0570096E77E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		455C2A431AE4A0570096E77E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		459AE0D31A23A10900FBEDEC /* redlightgreenlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = redlightgreenlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		459AE0D71A23A10900FBEDEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		459AE0D81A23A10900FBEDEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				459AE0DD1A23A10900FBEDEC /* ViewController.h */,
 				459AE0DE1A23A10900FBEDEC /* ViewController.m */,
 				459AE0E01A23A10900FBEDEC /* Main.storyboard */,
+				455C2A421AE4A0570096E77E /* HomeViewController.h */,
+				455C2A431AE4A0570096E77E /* HomeViewController.m */,
 				459AE0E31A23A10A00FBEDEC /* Images.xcassets */,
 				459AE0E51A23A10A00FBEDEC /* LaunchScreen.xib */,
 				459AE0D61A23A10900FBEDEC /* Supporting Files */,
@@ -287,6 +292,7 @@
 				459AE0DF1A23A10900FBEDEC /* ViewController.m in Sources */,
 				459AE0DC1A23A10900FBEDEC /* AppDelegate.m in Sources */,
 				459AE0D91A23A10900FBEDEC /* main.m in Sources */,
+				455C2A441AE4A0580096E77E /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
