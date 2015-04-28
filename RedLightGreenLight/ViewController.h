@@ -10,6 +10,8 @@
 #import <iAd/iAd.h>
 #import <QuartzCore/QuartzCore.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
+#import <GameKit/GameKit.h>
+#import "HomeViewController.h"
 
 @interface ViewController : UIViewController <ADBannerViewDelegate,UIGestureRecognizerDelegate>
 
@@ -21,9 +23,11 @@
 @property float intervalRand;
 @property int intervalTracker;
 @property BOOL freeze;
+@property BOOL gameCenterEnabled;
 @property int stepsTaken;
 @property int counts;
 @property NSUserDefaults *defaults;
+@property NSString *leaderboardIdentifier;
 
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *personHeight;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *personWidth;

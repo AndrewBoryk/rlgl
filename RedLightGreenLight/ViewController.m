@@ -73,8 +73,6 @@ float fontSize;
     self.close.layer.borderColor = [UIColor blackColor].CGColor;
     self.shareButton.layer.borderWidth = 0.25f;
     self.shareButton.layer.borderColor = [UIColor blackColor].CGColor;
-    self.howToView.layer.borderWidth = 0.25f;
-    self.howToView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.howToView.layer.cornerRadius = 10.0f;
     [self.howToView clipsToBounds];
     self.oneLabel.text = [NSString stringWithFormat:@"Rules"];
@@ -186,6 +184,7 @@ float fontSize;
             [self.defaults setInteger:self.stepsTaken forKey:@"stepScore"];
             [self.defaults setInteger:self.counts forKey:@"timeScore"];
             [self.defaults synchronize];
+            [self reportScore];
 //            self.stepHigh.text = [NSString stringWithFormat:@"%i", (int)[self.defaults integerForKey:@"stepScore"]];
 //            self.timeHigh.text = [NSString stringWithFormat:@"%i", (int)[self.defaults integerForKey:@"timeScore"]];
         }
@@ -250,6 +249,7 @@ float fontSize;
             [self.defaults setInteger:self.stepsTaken forKey:@"stepScore"];
             [self.defaults setInteger:self.counts forKey:@"timeScore"];
             [self.defaults synchronize];
+            [self reportScore];
 //            self.stepHigh.text = [NSString stringWithFormat:@"%i", (int)[self.defaults integerForKey:@"stepScore"]];
 //            self.timeHigh.text = [NSString stringWithFormat:@"%i", (int)[self.defaults integerForKey:@"timeScore"]];
         }
@@ -443,6 +443,18 @@ float fontSize;
               self.menuButton.enabled = YES;
           }];
      }];
+}
+
+
+-(void)reportScore{
+    GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:@"leaderboardRLGL"];
+    score.value = (int)[self.defaults integerForKey:@"stepScore"];
+    
+    [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
+        if (error != nil) {
+            NSLog(@"%@", [error localizedDescription]);
+        }
+    }];
 }
 
 - (IBAction)startActionNow:(id)sender {

@@ -53,6 +53,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="leaderboardShow:" destination="z5Y-Wn-a33" eventType="touchUpInside" id="21T-Rt-2UU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.14117647059999999" green="0.1450980392" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,6 +79,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="leadButton" destination="7CP-RU-1H3" id="Vea-jt-dDk"/>
                         <outlet property="pulsePlay" destination="sbk-Lu-s3x" id="MMR-Ql-i9I"/>
                     </connections>
                 </viewController>
@@ -360,9 +364,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="cFJ-7R-f7D"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="40"/>
                                         <size key="titleShadowOffset" width="-1" height="1"/>
-                                        <state key="normal" title="Start">
+                                        <state key="normal" title="START">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.14117647059999999" green="0.1450980392" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>

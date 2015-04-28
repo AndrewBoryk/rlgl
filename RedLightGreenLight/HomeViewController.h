@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface HomeViewController : UIViewController
+#import <GameKit/GameKit.h>
+#import "GameKitHelper.h"
+@interface HomeViewController : UIViewController <GKGameCenterControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *pulsePlay;
+- (IBAction)leaderboardShow:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *leadButton;
+@property NSString *leaderboardIdentifier;
+@property BOOL gameCenterEnabled;
+@property NSUserDefaults *defaults;
+//@property (strong, nonatomic) UIActionSheet *customActionSheet;
 
 @end
